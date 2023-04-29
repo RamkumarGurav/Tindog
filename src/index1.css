@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Allura&family=Indie+Flower&family=Lato&family=Merriweather&family=Montserrat:wght@400;900&family=Nunito:wght@700&family=Permanent+Marker&family=Playfair+Display&family=Poppins&family=Press+Start+2P&family=Roboto&family=Titillium+Web:wght@900&family=Ubuntu&family=Yellowtail&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.ram-grid-auto {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  place-content: center;
+  place-items: center;
+}
+
+.badge {
+  @apply bg-gray-300 text-black rounded-full font-bold absolute top-0 text-xs p-2 uppercase m-2;
+}
+
+.card {
+  @apply bg-gray-100 rounded overflow-hidden w-64 m-4 shadow-md relative hover:scale-105;
+}
+
+.tbtn {
+  @apply uppercase text-xs tracking-wider py-2 px-3 font-bold cursor-pointer;
+}
+
+.card-transition{
+  transition: all .3s ease-in-out;
+}
+
+.home a:hover svg {
+  fill: black;
+}
+
+.readmore:hover {
+  color: tomato;
+}
+
+.hoverbtn:hover {
+  background-color: white;
+  color: tomato;
+  border: 3px solid tomato;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: "Montserrat", sans-serif;
+  background-color: rgb(179, 156, 56);
+}
+/* 
+a {
+  text-decoration: none;
+  color: white;
+} */

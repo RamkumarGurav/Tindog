@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+/* eslint-disable */
+import React from "react";
+import Download from "./components/Download";
+import Features from "./components/Features";
+import Footer from "./components/Footer";
+import HeaderX from "./components/HeaderX";
+import Header from "./components/Header";
+import Pract from "./components/Pract";
+import Press from "./components/Press";
+import Price from "./components/Price";
+import Testimonials from "./components/Testimonials";
+import NavbarT from "./components/NavbarT";
+import NavbarComplexT from "./components/NavbarComplexT";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    {/* <NavbarComplexT/> */}
+    {/* <NavbarT/>  */}
+      {/* <HeaderX /> */}
+      <Header/>
+      <Features/>
+<Testimonials/>
+<Press/>
+<Price/>
+<Download/>
+<Footer/>
     </div>
   );
-}
+};
 
 export default App;

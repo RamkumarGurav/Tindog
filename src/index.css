@@ -1,13 +1,400 @@
-body {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: "Nunito", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  font-family: "Ubuntu", sans-serif;
+  padding: 0;
+}
+
+nav .container-fluid {
+  padding: 0;
+}
+
+.navbar-brand {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.nav-item {
+  padding: 0 10px;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  font-family: "Montserrat-Light", sans-serif;
+}
+
+button:active {
+  transform: scale(1.1);
+}
+
+#title {
+  background-color: #ff4c68;
+  color: #fff;
+  overflow: hidden;
+}
+
+.big-heading {
+  font-family: "Montserrat-Black", sans-serif;
+  font-size: 3rem;
+  line-height: 1.5;
+  font-weight: 900;
+}
+
+.container-fluid {
+  padding: 3% 10%;
+}
+
+#title .row {
+  margin-top: 1.5rem;
+  margin-bottom: 15%;
+}
+
+.col-iphone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-top: 5%;
+}
+
+.col-iphone img {
+  transform: rotate(25deg);
+  width: 60%;
+  position: absolute;
+  top: 15%;
+}
+
+/* Features---------- */
+
+/* #features{
+ 
+} */
+
+.container-fluid {
+  padding: 7% 10%;
+}
+
+.feature-card {
+  /* padding: 2%; */
+  display: inline-block;
+  text-align: center;
+}
+
+.feature-card i {
+  font-size: 2.5rem;
+  color: #ef8172;
+  margin-bottom: 1rem;
+}
+
+.feature-card i:hover {
+  color: #ff4c68;
+}
+
+.feature-card h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  padding-bottom: 5px;
+}
+
+.feature-card p {
+  font-family: "Montserrat", sans-serif;
+  color: #8f8f8f;
+  font-size: 1rem;
+}
+
+/* -----Testimonials------- */
+.test {
+  background-color: #ef8172;
+}
+.testimonials {
+  height: 400px;
+  padding: 7% 15%;
+  text-align: center;
+  background-color: #ef8172;
+  color: #fff;
+}
+
+.testimonial-image {
+  width: 80px;
+  border-radius: 100%;
+  margin: 10px;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 1.4;
+}
+
+/* .clt{
+  max-height: 350px;
+} */
+.clh {
+  height: 80px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+/* -------------press------- */
+#press {
+  padding-bottom: 3%;
+  text-align: center;
+  background-color: #ef8172;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#press img {
+  width: 15%;
+  margin: 20px;
+}
+
+/* ---------------price--------- */
+#price {
+  padding: 7% 10%;
+  text-align: center;
+}
+
+#price p {
+  color: #8f8f8f;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+#price .row {
+  margin-top: 40px;
+}
+
+#price .card {
+  padding: 0 0 5% 0;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#price .card:hover {
+  transform: scale(1.1);
+  z-index: 3;
+  transition: ease-in-out 0.3s;
+}
+
+#price .row h3 {
+  font-family: "Montserrat-Balck", sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+#price .row h2 {
+  font-size: 1.8rem;
+}
+#price .row p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  margin-bottom: 7px;
+  font-weight: 400;
+  color: #272626;
+}
+
+/* --------Download----- */
+
+#download {
+  padding: 10% 15%;
+  text-align: center;
+  color: white;
+  background-color: #ff4c68;
+}
+
+button {
+  margin: 0;
+}
+
+/* -------------footer------ */
+
+#footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #ffffff;
+  color: #918a8a;
+  padding: 1%;
+}
+
+.social-icons {
+  margin-top: 30px;
+}
+.social-icons a {
+  text-decoration: none;
+  color: #ababab;
+  font-size: 2rem;
+  transition: opacity 0.5s;
+  display: inline-block;
+}
+.social-icons a:hover {
+  color: #ff4c68;
+  transform: translateY(-5px);
+}
+
+#footer p {
+  margin-top: 10px;
+  text-align: center;
+}
+
+#footer i {
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+@media (max-width: 768px) {
+  .col-iphone img {
+    position: static;
+    transform: rotate(0);
+  }
+  .row .col-iphone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .features {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .testimonials h2 {
+    font-size: 1.5rem;
+  }
+  #download h2 {
+    font-size: 1.8rem;
+  }
+
+  #price h2,
+  h3 {
+    font-size: 2.2rem;
+  }
+}
+
+/* ------Header--------- */
+.xheader-container {
+  width: "100%";
+  padding: 20px 25px;
+  background-color: #ff4c68;
+  box-shadow: 0 8px 15px -10px rgb(36, 36, 36);
+}
+.xheader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.xlogo {
+  font-size: 25px;
+  font-weight: 600;
+  z-index: 999;
+  color: white;
+  text-decoration: none;
+}
+
+.xlogo p:hover {
+  color: rgb(229, 228, 230);
+}
+
+.ham {
+  visibility: visible;
+  z-index: 999;
+}
+
+.xnav {
+  width: 100%;
+  position: absolute;
+  top: -100%;
+  left: 0;
+  padding: 10px 23px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  z-index: 99;
+  transition: all 0.5s ease-in-out;
+  background-color: #ff4c68;
+
+  box-shadow: 0 8px 15px -10px rgb(36, 36, 36);
+}
+.xnavOpen {
+  top: 70px;
+  left: 0;
+}
+
+.xnav a {
+  align-self: flex-start;
+  color: white;
+}
+
+.xnav a:hover {
+  color: #e3b6ee;
+}
+
+@media screen and (min-width: 640px) {
+}
+@media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 1024px) {
+  .xheader {
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .ham {
+    display: none;
+    visibility: none;
+  }
+
+  .xnav {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    box-shadow: none;
+    padding-bottom: 23px;
+  }
+
+  .xnav a p{
+    font-size: 20px;
+  }
+
+  .xlogo {
+    font-size: 35px;
+  }
+}
+@media screen and (min-width: 1280px) {
+}
+@media screen and (min-width: 1536px) {
 }
